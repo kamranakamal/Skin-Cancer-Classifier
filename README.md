@@ -2,6 +2,16 @@
 
 FastAPI service for skin cancer classification using an exported ONNX model. The project includes a small inference API, training and evaluation visuals, and Grad-CAM examples that help interpret model predictions on benign and malignant cases.
 
+## Achievements
+
+The trained model achieved 90% accuracy, 89% recall, and 92% F1-score on the evaluation set.
+
+## Dataset
+
+This project uses the Melanoma Skin Cancer Dataset of 10000 Images from Kaggle. It contains dermoscopic skin images labeled for melanoma-related classification tasks and was used to train and evaluate the model in this repository.
+
+Kaggle dataset link: https://www.kaggle.com/datasets/hasnainjaved/melanoma-skin-cancer-dataset-of-10000-images
+
 ## What’s inside
 
 - `app.py` exposes a FastAPI app with health, info, and prediction endpoints.
