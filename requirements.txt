@@ -1,0 +1,13 @@
+torch
+torchvision
+onnx
+onnxruntime
+numpy
+pandas
+scikit-learn
+matplotlib
+seaborn
+grad-cam
+pillow
+torchmetrics
+fastapi[standard]
