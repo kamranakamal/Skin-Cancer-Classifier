@@ -14,6 +14,15 @@ app = FastAPI()
 def health():
     return {"health": "ok"}
 
+
+@app.get("/")
+def home():
+    return {
+        "about": "Skin cancer detection api",
+        "endpoints":['/health', '/', '/predict']
+
+    }
+
 @app.post("/predict")
 async def predict_endpoint(file: UploadFile = File(...)):
     # Read uploaded file
