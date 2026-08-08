@@ -56,12 +56,24 @@ Install the dependencies with pip:
 pip install -r requirements.txt
 ```
 
+If you prefer `uv`, install and sync the project dependencies from `pyproject.toml`:
+
+```bash
+uv sync
+```
+
 ## Run the API
 
 Start the server with Uvicorn:
 
 ```bash
 uvicorn app:app --reload
+```
+
+Or run it directly with `uv`:
+
+```bash
+uv run uvicorn app:app --reload
 ```
 
 Once the server is running, open the interactive docs at `http://127.0.0.1:8000/docs`.
@@ -71,6 +83,7 @@ Once the server is running, open the interactive docs at `http://127.0.0.1:8000/
 - `GET /` returns a short description and the available endpoints.
 - `GET /health` returns a simple health check response.
 - `POST /predict` accepts an uploaded image file and returns the model prediction.
+- `POST /predict-gradcam` accepts an uploaded image file and returns an HTML page with the Grad-CAM visualization embedded.
 
 ### Prediction example
 
